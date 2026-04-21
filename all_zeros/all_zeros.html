@@ -20,14 +20,14 @@ Below are the most common types of deadlocks you can build. Keep in mind that th
 <br>
 <h3 id="ratios">Two Outputs to Two Inputs</h3>
 <figure>
-<img src="aluminum_ingot1.png"/>
+<img src="aluminum_ingot1.png">
 <figcaption>
 Everything calculated to zero.
 </figcaption>
 </figure>
 
 <figure>
-<img src="aluminum_ingot2.png"/>
+<img src="aluminum_ingot2.png">
 <figcaption>
 If we disconnect the bottom path, we see it requires 150 but only supplies 50. This means the top path cannot be fully consumed, lowering the output of the bottom path, creating a feedback loop that approaches zero and everything will grind to a halt.
 <br>
@@ -36,8 +36,8 @@ This is most commonly seen when a machine has two outputs whose paths merge back
 </figure>
 
 <figure>
-<img src="aluminum_ingot3.png"/>
-<img src="aluminum_ingot4.png"/>
+<img src="aluminum_ingot3.png">
+<img src="aluminum_ingot4.png">
 <figcaption>
 The fix is either to give a place for extra resources to go on the backed-up path, or to supply extra resources to the starved path.
 </figcaption>
@@ -45,14 +45,14 @@ The fix is either to give a place for extra resources to go on the backed-up pat
 <br>
 <h3 id="loopback">Not Enough Resources Looped Back</h3>
 <figure>
-<img src="alumina2.png"/>
+<img src="alumina2.png">
 <figcaption>
 Everything calculated to zero.
 </figcaption>
 </figure>
 
 <figure>
-<img src="alumina1.png"/>
+<img src="alumina1.png">
 <figcaption>
 If you disconnect the water you see it requires 180 water, but only supplies 60 water.
 <br>
@@ -61,7 +61,7 @@ By only supplying 60 water, you only produce 20 water, which now only supplies 2
 </figure>
 
 <figure>
-<img src="alumina3.png"/>
+<img src="alumina3.png">
 <figcaption>
 Fix it by adding more water.
 </figcaption>
@@ -70,14 +70,14 @@ Fix it by adding more water.
 <br>
 <h3 id="evensplit">Splitter/Merger Preference</h3>
 <figure>
-<img src="sloppy2.png"/>
+<img src="sloppy2.png">
 <figcaption>
 Here is what appears to be the same exact scenario as above, but it is still all zeros. Adding water fixed the other one, but not this one.
 </figcaption>
 </figure>
 
 <figure>
-<img src="sloppy1.png"/>
+<img src="sloppy1.png">
 <figcaption>
 If we disconnect the water we see that we need 200 but loopback 120. The key to this one is in the way the mergers work. They try to take as evenly as possible, which is 100 from the loopback and 100 from the water extractor. This backs up the loopback water causing everything to grind to a halt.
 <br>
@@ -86,7 +86,7 @@ This fails, while the previous example does not, because the loopback is over 50
 </figure>
 
 <figure>
-<img src="sloppy3.png"/>
+<img src="sloppy3.png">
 <figcaption>
 Fix it by adding a priority merger. This ensures that the loopback gets taken first. In game you will need to arrange your pipes to ensure the loopback gets taken first unless you build EXACTLY the amount of water you need.
 </figcaption>
@@ -97,21 +97,21 @@ Fix it by adding a priority merger. This ensures that the loopback gets taken fi
 <br>
 <h3 id="oversupply">Too Many Resources Looped Back</h3>
 <figure>
-<img src="dark1.png"/>
+<img src="dark1.png">
 <figcaption>
 Everything calculated to zero, despite using a priority merger.
 </figcaption>
 </figure>
 
 <figure>
-<img src="dark2.png"/>
+<img src="dark2.png">
 <figcaption>
 If you disconnect the Dark Matter Residue, you will see it loops back more than is needed. Causing a backup which grinds everything to a halt.
 </figcaption>
 </figure>
 
 <figure>
-<img src="dark3.png"/>
+<img src="dark3.png">
 <figcaption>
 Fix it by giving the excess someplace to go. Be sure to use a priority splitter to ensure enough always gets looped back before getting rid of the excess.
 </figcaption>
