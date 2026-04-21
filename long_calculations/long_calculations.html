@@ -13,7 +13,7 @@
 
 <p>
 When using the Full calculator, the calculations can slow down a lot on larger builds.
-There may be a break through in the calculation algorithm in the future, but for now here is what you can do.
+There may be a breakthrough in the calculation algorithm in the future, but for now here is what you can do.
 </p>
 
 <ul>
@@ -22,7 +22,7 @@ There may be a break through in the calculation algorithm in the future, but for
 </ul>
 
 
-<br/>
+<br>
 <h3>Don't specify each individual machine, be more abstract</h3>
 <figure>
 <img src="individual_machines.png"/>
@@ -40,7 +40,7 @@ Compact the above into something that looks more like one of these four builds.
 </figure>
 
 
-<br/>
+<br>
 <h3>Reduce connections between sections</h3>
 <p>
 The Full calculator has optimizations in it to simplify certain builds. If feedback loops between sections can be eliminated, then those sections can be calculated independently, greatly improving performance.
@@ -49,40 +49,40 @@ The Full calculator has optimizations in it to simplify certain builds. If feedb
 <ul>
 <li>If there are zero connections between sections, then they can be calculated independently.</li>
 <li>If there is only one connection between sections, optimizations allow them to also be calculated independently.</li>
-<li>If there are mutiple connections between sections, then preventing a feedback loop may allow them to be calculated independently.</li>
+<li>If there are multiple connections between sections, then preventing a feedback loop may allow them to be calculated independently.</li>
 </ul>
 
 
-<br/>
+<br>
 <h3>Remove feedback loops</h3>
 <figure>
 <img src="feedback.png"/>
 <figcaption>
-In this example we have two outposts where a backup of the rods could effect the amount of screws produced, which could effect the rods consumed, leading to a feedback loop.
+In this example, we have two outposts where a backup of the rods could affect the amount of screws produced, which could affect the rods consumed, leading to a feedback loop.
 </figcaption>
 </figure>
 
 <figure>
 <img src="overflow.png"/>
 <figcaption>
-By adding priority splitters allowing overflow to go to a sink, it means that if the rods or screws backup from the right outpost, that backup cannot propegate into the left outpost because they will go to the sink instead.
-<br/>
-This means that any changes to the right outpost cannot effect the left outpost. The Full calculator can see this and split the two up into much, much smaller problems, allowing for far quicker calculations.
+By adding priority splitters allowing overflow to go to a sink, it means that if the rods or screws backup from the right outpost, that backup cannot propagate into the left outpost because they will go to the sink instead.
+<br>
+This means that any changes to the right outpost cannot affect the left outpost. The Full calculator can see this and split the two up into much, much smaller problems, allowing for far quicker calculations.
 </figcaption>
 </figure>
 
 <figure>
 <img src="storage.png"/>
 <figcaption>
-Properly set storage containers can also work for a less cluttered look. In this example they are set to empty, so any extra will collect instead of getting backed up.
+Properly set storage containers can also work for a less cluttered look. In this example they are set to empty, so any extra will be collected instead of getting backed up.
 </figcaption>
 </figure>
 
-<br/>
+<br>
 <h4 style="display:inline;">Up: </h4><a href="../index.html">Main</a>
-<br/>
+<br>
 <h4 style="display:inline;">Previous: </h4><a href="../all_zeros/all_zeros.html">All Zeros</a>
-<br/>
+<br>
 <h4 style="display:inline;">Next: </h4><a href="../blank_values/blank_values.html">Blank Values</a>
 
 </body>
