@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="../general.css">
+<link rel="icon" type="image/x-icon" href="../favicon.ico">
+<title>Long Calculations</title>
+</head>
+<body>
+
+<h1><a href="../index.html">Satisfactory Modeler</a></h1>
+
+<h2>Long Calculations</h2>
+
+<p>
+When using the Full calculator, the calculations can slow down a lot on larger builds.
+There may be a break through in the calculation algorithm in the future, but for now here is what you can do.
+</p>
+
+<ul>
+<li>Switch to a different <a href="../calculators/calculators.html">calculator</a>. The manual calculator is always fast and some people find it more intuitive.</li>
+<li>Use the following building tips to allow the Full calculator's optimizations to be better used.</li>
+</ul>
+
+
+<br/>
+<h3>Don't specify each individual machine, be more abstract</h3>
+<figure>
+<img src="individual_machines.png"/>
+<figcaption>
+Do NOT specify each machine. Just place one and let the modeler tell you how many you need.
+</figcaption>
+</figure>
+
+<figure>
+<img src="compact_machines1.png"/>
+<img src="compact_machines2.png"/>
+<figcaption>
+Compact the above into something that looks more like one of these four builds.
+</figcaption>
+</figure>
+
+
+<br/>
+<h3>Reduce connections between sections</h3>
+<p>
+The Full calculator has optimizations in it to simplify certain builds. If feedback loops between sections can be eliminated, then those sections can be calculated independently, greatly improving performance.
+</p>
+
+<ul>
+<li>If there are zero connections between sections, then they can be calculated independently.</li>
+<li>If there is only one connection between sections, optimizations allow them to also be calculated independently.</li>
+<li>If there are mutiple connections between sections, then preventing a feedback loop may allow them to be calculated independently.</li>
+</ul>
+
+
+<br/>
+<h3>Remove feedback loops</h3>
+<figure>
+<img src="feedback.png"/>
+<figcaption>
+In this example we have two outposts where a backup of the rods could effect the amount of screws produced, which could effect the rods consumed, leading to a feedback loop.
+</figcaption>
+</figure>
+
+<figure>
+<img src="overflow.png"/>
+<figcaption>
+By adding priority splitters allowing overflow to go to a sink, it means that if the rods or screws backup from the right outpost, that backup cannot propegate into the left outpost because they will go to the sink instead.
+<br/>
+This means that any changes to the right outpost cannot effect the left outpost. The Full calculator can see this and split the two up into much, much smaller problems, allowing for far quicker calculations.
+</figcaption>
+</figure>
+
+<figure>
+<img src="storage.png"/>
+<figcaption>
+Properly set storage containers can also work for a less cluttered look. In this example they are set to empty, so any extra will collect instead of getting backed up.
+</figcaption>
+</figure>
+
+<br/>
+<h4 style="display:inline;">Up: </h4><a href="../index.html">Main</a>
+<br/>
+<h4 style="display:inline;">Previous: </h4><a href="../all_zeros/all_zeros.html">All Zeros</a>
+<br/>
+<h4 style="display:inline;">Next: </h4><a href="../blank_values/blank_values.html">Blank Values</a>
+
+</body>
+</html>

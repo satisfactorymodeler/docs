@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="../../general.css">
+<link rel="icon" type="image/x-icon" href="../../favicon.ico">
+<title>Basic Calculator</title>
+</head>
+<body>
+
+<h1><a href="../../index.html">Satisfactory Modeler</a></h1>
+
+<h2>Basic Calculator</h2>
+<p>
+This does NOT take into account splitter or merger preference to split/merge evenly, nor does it take into account priority splitters or mergers.
+<br/>
+The values entered in this mode are limits.
+<br/>
+This tries to find any solution that maximizes the values and may not always give the same answer if there could be multiple solutions because not enough information was given.
+<br/>
+This should always be fast.
+</p>
+
+<br/>
+<h3>Examples</h3>
+
+<figure>
+<img src="split.png"/>
+<figcaption>
+This does not take into account splitters preference to split evenly. This finds any valid solution. This could have calculated other valid solutions such as more ingots going to plates.
+</figcaption>
+</figure>
+
+<br/>
+<figure>
+<img src="uneven_split.png"/>
+<figcaption>
+While this does ensure the rods cannot go higher, this could have calculated other valid solutions such as more ingots going to plates.
+</figcaption>
+</figure>
+
+<br/>
+<figure>
+<img src="split_insufficient.png"/>
+<figcaption>
+In this example, not enough limits where entered to be able to define everything.
+</figcaption>
+</figure>
+
+
+<br/>
+<figure>
+<img src="priority_split.png"/>
+<figcaption>
+Priority splits and merges are ignored and treated like any other split or merge. In this case it sent all of them to the bottom, but could return different split ratios.
+</figcaption>
+</figure>
+
+<br/>
+<figure>
+<img src="defined_split.png"/>
+<figcaption>
+This example has enough limits entered to be able to define how this will split. This will always return this exact result.
+</figcaption>
+</figure>
+
+<br/>
+<h4 style="display:inline;">Up: </h4><a href="../calculators.html">Calculators</a>
+<br/>
+<h4 style="display:inline;">Previous: </h4><a href="../full/full.html">Full Calculator</a>
+<br/>
+<h4 style="display:inline;">Next: </h4><a href="../manual/manual.html">Manual Calculator</a>
+
+</body>
+</html>
