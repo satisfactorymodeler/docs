@@ -1,10 +1,20 @@
-p {
+:root
+{
+  color-scheme: light dark;
+}
+
+p
+{
     margin-left: 40px;
 }
-ul {
+
+ul
+{
     margin-left: 20px;
 }
-img {
+
+img
+{
     max-width: 100%;
     max-height: 100%;
 }
